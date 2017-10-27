@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+		<groupId>org.jeesl</groupId>
+		<artifactId>jeesl</artifactId>
+		<version>0.2.6-SNAPSHOT</version>
+	</parent>
+
+   <artifactId>jeesl-eclipse</artifactId>
+   <packaging>jar</packaging>
+   <name>Eclipse compiler test</name>
+   
+	<properties>
+	  	<my.build.directory>target</my.build.directory>
+	  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	  	<maven.build.timestamp.format>yyyyMMdd'T'HHmmss</maven.build.timestamp.format>
+    </properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jeesl</groupId>
+				<artifactId>jeesl-bom</artifactId>
+				<version>${project.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+   		<!-- JEESL -->
+   		<dependency>
+			<groupId>org.jeesl</groupId>
+			<artifactId>jeesl-api</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+	       		<artifactId>maven-compiler-plugin</artifactId>
+	       		<configuration>
+	          		<source>1.8</source>
+	          		<target>1.8</target>
+	          		<encoding>${project.build.sourceEncoding}</encoding>
+	       		</configuration>
+           	</plugin>
+		</plugins>
+	</build>
+   
+   <repositories>
+		<repository>
+			<id>sonatype.snapshot</id>
+			<name>Sonatype Snapshot Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<releases><enabled>false</enabled></releases>
+			<snapshots><enabled>true</enabled></snapshots>
+		</repository>
+		<repository>
+            <id>redhat.ga</id>
+            <name>JBoss Repository</name>
+            <url>https://maven.repository.redhat.com/ga</url>
+            <releases><enabled>true</enabled></releases>
+			<snapshots><enabled>false</enabled></snapshots>
+        </repository>
+    </repositories>
+   
+	<profiles>
+		<profile>
+     		<id>ram</id>
+     		<build>
+     			<directory>${my.build.directory}</directory>
+     		</build>
+   		</profile>
+	</profiles>
+</project>
