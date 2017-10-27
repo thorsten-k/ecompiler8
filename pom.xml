@@ -8,7 +8,7 @@
 		<version>0.2.6-SNAPSHOT</version>
 	</parent>
 
-   <artifactId>jeesl-eclipse</artifactId>
+   <artifactId>ecompiler8</artifactId>
    <packaging>jar</packaging>
    <name>Eclipse compiler test</name>
    
@@ -31,7 +31,6 @@
 	</dependencyManagement>
 
 	<dependencies>
-   		<!-- JEESL -->
    		<dependency>
 			<groupId>org.jeesl</groupId>
 			<artifactId>jeesl-api</artifactId>
@@ -43,8 +42,8 @@
 			<plugin>
 	       		<artifactId>maven-compiler-plugin</artifactId>
 	       		<configuration>
-	          		<source>1.8</source>
-	          		<target>1.8</target>
+	          		<source>1.7</source>
+	          		<target>1.7</target>
 	          		<encoding>${project.build.sourceEncoding}</encoding>
 	       		</configuration>
            	</plugin>
