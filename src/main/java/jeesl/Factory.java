@@ -23,7 +23,8 @@ public class Factory
 {	
 	public static TsFactoryBuilder<JeeLang,JeeDescription,JeeTsCategory,JeeTsScope,JeeTsUnit,JeeTimeSeries,JeeTsTransaction,JeeTsDataSource,JeeTsBridge,JeeTsEntityClass,JeeTsInterval,JeeTsData,JeeTsSample,JeeUser,JeeTsWorkspace,JeeTsQaFlag> fbTimeSeries()
 	{
-		return new TsFactoryBuilder<>(JeeLang.class,JeeDescription.class,JeeTsCategory.class,JeeTsScope.class,JeeTsUnit.class,JeeTimeSeries.class,JeeTsTransaction.class,JeeTsDataSource.class,JeeTsBridge.class,JeeTsEntityClass.class,JeeTsInterval.class,JeeTsData.class,JeeTsWorkspace.class);
+		return null;
+//		return new TsFactoryBuilder<>(JeeLang.class,JeeDescription.class,JeeTsCategory.class,JeeTsScope.class,JeeTsUnit.class,JeeTimeSeries.class,JeeTsTransaction.class,JeeTsDataSource.class,JeeTsBridge.class,JeeTsEntityClass.class,JeeTsInterval.class,JeeTsData.class,JeeTsWorkspace.class);
 	}
 
 }
