@@ -1,15 +1,12 @@
 package jeesl.model.graphic;
 
-import java.io.Serializable;
-
 import org.apache.commons.lang.builder.HashCodeBuilder;
-import org.jeesl.interfaces.model.system.symbol.JeeslGraphicFigure;
+import org.jeesl.interfaces.model.system.graphic.core.JeeslGraphicFigure;
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
 
-
-public class JeeGraphicFigure implements Serializable,JeeslGraphicFigure<JeeLang,JeeDescription,JeeGraphic,JeeGraphicType,JeeGraphicFigure,JeeGraphicStyle>
+public class JeeGraphicFigure implements JeeslGraphicFigure<JeeLang,JeeDescription,JeeGraphic,JeeGraphicType,JeeGraphicFigure,JeeGraphicStyle>
 {
 	public static final long serialVersionUID=1;
 	

@@ -4,12 +4,8 @@ import java.io.Serializable;
 
 import org.jeesl.interfaces.model.system.security.framework.JeeslSecurityMenu;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
-import jeesl.model.user.JeeUser;
-
 public class SecurityMenu implements Serializable,
-				JeeslSecurityMenu<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityUsecase,SecurityAction,SecurityActionTemplate,SecurityMenu,JeeUser>
+				JeeslSecurityMenu<SecurityView,SecurityMenu>
 {
 	public static final long serialVersionUID=1;
 	

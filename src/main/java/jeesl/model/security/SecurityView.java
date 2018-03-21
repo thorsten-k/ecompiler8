@@ -14,7 +14,7 @@ import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityView implements Serializable,EjbRemoveable,EjbPersistable,
-						JeeslSecurityView<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityUsecase,SecurityAction,SecurityActionTemplate,JeeUser>
+						JeeslSecurityView<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityUsecase,SecurityAction>
 {
 	public static final long serialVersionUID=1;
 	
@@ -39,6 +39,10 @@ public class SecurityView implements Serializable,EjbRemoveable,EjbPersistable,
 	private Boolean documentation;
 	@Override public Boolean getDocumentation() {return documentation;}
 	@Override public void setDocumentation(Boolean documentation) {this.documentation = documentation;}
+
+	private Boolean redirect;
+	@Override public Boolean getRedirect() {return redirect;}
+	@Override public void setRedirect(Boolean redirect) {this.redirect = redirect;}
 
 	private int position;
 	@Override public int getPosition() {return position;}

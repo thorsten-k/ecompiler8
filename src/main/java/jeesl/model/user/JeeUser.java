@@ -6,21 +6,14 @@ import java.util.List;
 
 import org.jeesl.interfaces.model.system.security.user.JeeslUser;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
-import jeesl.model.security.SecurityAction;
-import jeesl.model.security.SecurityActionTemplate;
-import jeesl.model.security.SecurityCategory;
 import jeesl.model.security.SecurityRole;
-import jeesl.model.security.SecurityUsecase;
-import jeesl.model.security.SecurityView;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.with.EjbWithEmail;
 import net.sf.ahtutils.model.interfaces.with.EjbWithId;
 
 public class JeeUser implements Serializable,EjbWithId,EjbPersistable,
 								EjbWithEmail,
-								JeeslUser<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityUsecase,SecurityAction,SecurityActionTemplate,JeeUser>
+								JeeslUser<SecurityRole>
 {
 	public static final long serialVersionUID=1;
 

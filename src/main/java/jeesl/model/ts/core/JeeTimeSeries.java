@@ -11,7 +11,7 @@ import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class JeeTimeSeries implements Serializable,EjbRemoveable,EjbPersistable,
-								JeeslTimeSeries<JeeLang,JeeDescription,JeeTsScope,JeeTsBridge,JeeTsInterval>
+								JeeslTimeSeries<JeeTsScope,JeeTsBridge,JeeTsInterval>
 {
 	public static final long serialVersionUID=1;
 	

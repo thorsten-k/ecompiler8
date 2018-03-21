@@ -14,7 +14,7 @@ import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityUsecase implements Serializable,EjbRemoveable,EjbPersistable,
-			JeeslSecurityUsecase<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityUsecase,SecurityAction,SecurityActionTemplate,JeeUser>
+			JeeslSecurityUsecase<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityAction>
 {
 	public static final long serialVersionUID=1;
 	

@@ -8,12 +8,11 @@ import org.jeesl.interfaces.model.system.security.framework.JeeslSecurityTemplat
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
-import jeesl.model.user.JeeUser;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityActionTemplate implements Serializable,EjbRemoveable,EjbPersistable,
-	JeeslSecurityTemplate<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityUsecase,SecurityAction,SecurityActionTemplate,JeeUser>
+	JeeslSecurityTemplate<JeeLang,JeeDescription,SecurityCategory>
 {
 	public static final long serialVersionUID=1;
 	

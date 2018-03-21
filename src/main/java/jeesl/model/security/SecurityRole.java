@@ -15,7 +15,7 @@ import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityRole implements EjbWithCode,Serializable,EjbRemoveable,EjbPersistable,
-	JeeslSecurityRole<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityUsecase,SecurityAction,SecurityActionTemplate,JeeUser>
+	JeeslSecurityRole<JeeLang,JeeDescription,SecurityCategory,SecurityView,SecurityUsecase,SecurityAction,JeeUser>
 {
 	public static enum Code {systemAht}
 	

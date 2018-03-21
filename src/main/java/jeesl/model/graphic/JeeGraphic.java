@@ -4,14 +4,14 @@ import java.io.Serializable;
 import java.util.List;
 
 import org.apache.commons.lang.builder.HashCodeBuilder;
-import org.jeesl.interfaces.model.system.symbol.JeeslGraphic;
+import org.jeesl.interfaces.model.system.graphic.core.JeeslGraphic;
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
 import net.sf.ahtutils.model.qualifier.EjbErNode;
 
 @EjbErNode(name="Graphic",category="symbol",subset="sld",level=3)
-public class JeeGraphic implements Serializable,JeeslGraphic<JeeLang,JeeDescription,JeeGraphic,JeeGraphicType,JeeGraphicFigure,JeeGraphicStyle>
+public class JeeGraphic implements JeeslGraphic<JeeLang,JeeDescription,JeeGraphic,JeeGraphicType,JeeGraphicFigure,JeeGraphicStyle>
 {
 	public static final long serialVersionUID=1;
 	
