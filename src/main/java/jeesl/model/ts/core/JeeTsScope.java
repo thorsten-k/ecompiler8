@@ -11,8 +11,9 @@ import jeesl.model.locales.JeeLang;
 import jeesl.model.ts.type.JeeTsCategory;
 import jeesl.model.ts.type.JeeTsInterval;
 import jeesl.model.ts.type.JeeTsUnit;
+import jeesl.model.ts.type.TsScopeType;
 
-public class JeeTsScope implements JeeslTsScope<JeeLang,JeeDescription,JeeTsCategory,JeeTsUnit,JeeTsEntityClass,JeeTsInterval>
+public class JeeTsScope implements JeeslTsScope<JeeLang,JeeDescription,JeeTsCategory,TsScopeType,JeeTsUnit,JeeTsEntityClass,JeeTsInterval>
 {
 	public static final long serialVersionUID=1;
 	public static enum Code{rf,airTemp,
@@ -35,6 +36,10 @@ public class JeeTsScope implements JeeslTsScope<JeeLang,JeeDescription,JeeTsCate
 	private JeeTsUnit unit;
 	@Override public JeeTsUnit getUnit() {return unit;}
 	@Override public void setUnit(JeeTsUnit unit) {this.unit = unit;}
+	
+	private TsScopeType type;
+	@Override public TsScopeType getType() {return type;}
+	@Override public void setType(TsScopeType type) {this.type = type;}
 	
 	private int position;
 	@Override public int getPosition() {return position;}

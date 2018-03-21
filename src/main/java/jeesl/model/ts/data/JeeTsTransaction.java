@@ -1,30 +1,15 @@
 package jeesl.model.ts.data;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 import org.jeesl.interfaces.model.module.ts.JeeslTsTransaction;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
-import jeesl.model.ts.core.JeeTimeSeries;
-import jeesl.model.ts.core.JeeTsBridge;
-import jeesl.model.ts.core.JeeTsEntityClass;
-import jeesl.model.ts.core.JeeTsScope;
-import jeesl.model.ts.qa.JeeTsQaFlag;
-import jeesl.model.ts.type.JeeTsCategory;
 import jeesl.model.ts.type.JeeTsDataSource;
-import jeesl.model.ts.type.JeeTsInterval;
-import jeesl.model.ts.type.JeeTsUnit;
-import jeesl.model.ts.type.JeeTsWorkspace;
 import jeesl.model.user.JeeUser;
-import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
-import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
-public class JeeTsTransaction implements Serializable,EjbRemoveable,EjbPersistable,
-								JeeslTsTransaction<JeeLang,JeeDescription,JeeTsCategory,JeeTsScope,JeeTsUnit,JeeTimeSeries,JeeTsTransaction,JeeTsDataSource,JeeTsBridge,JeeTsEntityClass,JeeTsInterval,JeeTsData,JeeTsSample,JeeUser,JeeTsWorkspace,JeeTsQaFlag>
+public class JeeTsTransaction implements JeeslTsTransaction<JeeTsDataSource,JeeTsData,JeeUser>
 {
 	public static final long serialVersionUID=1;
 	
@@ -51,4 +36,8 @@ public class JeeTsTransaction implements Serializable,EjbRemoveable,EjbPersistab
 	private List<JeeTsData> datas;
 	@Override public List<JeeTsData> getDatas() {if(datas==null){datas = new ArrayList<JeeTsData>();} return datas;}
 	@Override public void setDatas(List<JeeTsData> datas) {this.datas = datas;}
+	
+	private String reference;
+	@Override public String getReference() {return reference;}
+	@Override public void setReference(String reference) {this.reference = reference;}
 }

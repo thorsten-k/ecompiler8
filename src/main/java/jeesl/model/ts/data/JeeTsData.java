@@ -12,8 +12,7 @@ import jeesl.model.ts.type.JeeTsWorkspace;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
-public class JeeTsData implements Serializable,EjbRemoveable,EjbPersistable,
-								JeeslTsData<JeeLang,JeeDescription,JeeTimeSeries,JeeTsTransaction,JeeTsSample,JeeTsWorkspace>
+public class JeeTsData implements JeeslTsData<JeeTimeSeries,JeeTsTransaction,JeeTsSample,JeeTsWorkspace>
 {
 	public static final long serialVersionUID=1;
 	

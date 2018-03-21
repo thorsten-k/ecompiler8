@@ -12,7 +12,6 @@ import net.sf.ahtutils.interfaces.model.status.UtilsStatus;
 
 public class JeeTsWorkspace extends JeeStatus
 								implements Serializable,EjbPersistable,EjbWithCode,
-											
 											UtilsStatus<JeeTsWorkspace,JeeLang,JeeDescription>
 {
 	public static final long serialVersionUID=1;
