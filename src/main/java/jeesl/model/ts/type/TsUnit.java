@@ -9,12 +9,11 @@ import jeesl.model.locales.JeeLang;
 import jeesl.model.locales.JeeStatus;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.status.UtilsStatus;
+import net.sf.ahtutils.interfaces.model.status.UtilsWithSymbol;
 
-public class JeeTsDataSource extends JeeStatus
-								implements Serializable,EjbPersistable,EjbWithCode,
-											UtilsStatus<JeeTsDataSource,JeeLang,JeeDescription>
+public class TsUnit extends JeeStatus
+								implements Serializable,EjbPersistable,EjbWithCode,UtilsWithSymbol,
+											UtilsStatus<TsUnit,JeeLang,JeeDescription>
 {
 	public static final long serialVersionUID=1;
-	
-	public enum Code{inventory}
 }

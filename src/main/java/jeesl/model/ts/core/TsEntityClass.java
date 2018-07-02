@@ -7,11 +7,11 @@ import org.jeesl.interfaces.model.module.ts.JeeslTsEntityClass;
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
-import jeesl.model.ts.type.JeeTsCategory;
+import jeesl.model.ts.type.TsCategory;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 
-public class JeeTsEntityClass implements Serializable,EjbPersistable,
-								JeeslTsEntityClass<JeeLang,JeeDescription,JeeTsCategory>
+public class TsEntityClass implements Serializable,EjbPersistable,
+								JeeslTsEntityClass<JeeLang,JeeDescription,TsCategory>
 {
 	public static final long serialVersionUID=1;
 	
@@ -21,9 +21,9 @@ public class JeeTsEntityClass implements Serializable,EjbPersistable,
 	
 	@Override public String resolveParentAttribute() {return "category";}
 	
-	private JeeTsCategory category;
-	@Override public JeeTsCategory getCategory() {return category;}
-	@Override public void setCategory(JeeTsCategory category) {this.category = category;}
+	private TsCategory category;
+	@Override public TsCategory getCategory() {return category;}
+	@Override public void setCategory(TsCategory category) {this.category = category;}
 	
 	private String code;
 	@Override public String getCode() {return code;}

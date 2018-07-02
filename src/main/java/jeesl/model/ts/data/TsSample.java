@@ -8,7 +8,7 @@ import org.jeesl.interfaces.model.module.ts.JeeslTsSample;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
-public class JeeTsSample implements Serializable,EjbRemoveable,EjbPersistable,
+public class TsSample implements Serializable,EjbRemoveable,EjbPersistable,
 								JeeslTsSample
 {
 	public static final long serialVersionUID=1;

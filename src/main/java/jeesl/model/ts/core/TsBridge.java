@@ -8,9 +8,9 @@ import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 import net.sf.ahtutils.interfaces.model.with.parent.EjbWithParentAttributeResolver;
 
-public class JeeTsBridge implements Serializable,EjbRemoveable,EjbPersistable,
+public class TsBridge implements Serializable,EjbRemoveable,EjbPersistable,
 							EjbWithParentAttributeResolver,
-							JeeslTsBridge<JeeTsEntityClass>
+							JeeslTsBridge<TsEntityClass>
 {
 	public static final long serialVersionUID=1;
 	public enum Attributes {entityClass}
@@ -24,7 +24,7 @@ public class JeeTsBridge implements Serializable,EjbRemoveable,EjbPersistable,
 	public void setRefId(long refId) {this.refId = refId;}
 
 	@Override public String resolveParentAttribute() {return Attributes.entityClass.toString();}
-	private JeeTsEntityClass entityClass;
-	@Override public JeeTsEntityClass getEntityClass() {return entityClass;}
-	@Override public void setEntityClass(JeeTsEntityClass entityClass) {this.entityClass = entityClass;}
+	private TsEntityClass entityClass;
+	@Override public TsEntityClass getEntityClass() {return entityClass;}
+	@Override public void setEntityClass(TsEntityClass entityClass) {this.entityClass = entityClass;}
 }

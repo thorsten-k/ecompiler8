@@ -8,12 +8,12 @@ import org.jeesl.interfaces.model.module.ts.JeeslTsScope;
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
-import jeesl.model.ts.type.JeeTsCategory;
-import jeesl.model.ts.type.JeeTsInterval;
-import jeesl.model.ts.type.JeeTsUnit;
+import jeesl.model.ts.type.TsCategory;
+import jeesl.model.ts.type.TsInterval;
+import jeesl.model.ts.type.TsUnit;
 import jeesl.model.ts.type.TsScopeType;
 
-public class JeeTsScope implements JeeslTsScope<JeeLang,JeeDescription,JeeTsCategory,TsScopeType,JeeTsUnit,JeeTsEntityClass,JeeTsInterval>
+public class TsScope implements JeeslTsScope<JeeLang,JeeDescription,TsCategory,TsScopeType,TsUnit,TsEntityClass,TsInterval>
 {
 	public static final long serialVersionUID=1;
 	public static enum Code{rf,airTemp,
@@ -25,17 +25,17 @@ public class JeeTsScope implements JeeslTsScope<JeeLang,JeeDescription,JeeTsCate
 	
 	@Override public String resolveParentAttribute() {return "category";}
 	
-	private JeeTsCategory category;
-	public JeeTsCategory getCategory() {return category;}
-	public void setCategory(JeeTsCategory category) {this.category = category;}
+	private TsCategory category;
+	public TsCategory getCategory() {return category;}
+	public void setCategory(TsCategory category) {this.category = category;}
 	
 	private String code;
 	@Override public String getCode() {return code;}
 	@Override public void setCode(String code) {this.code = code;}
 	
-	private JeeTsUnit unit;
-	@Override public JeeTsUnit getUnit() {return unit;}
-	@Override public void setUnit(JeeTsUnit unit) {this.unit = unit;}
+	private TsUnit unit;
+	@Override public TsUnit getUnit() {return unit;}
+	@Override public void setUnit(TsUnit unit) {this.unit = unit;}
 	
 	private TsScopeType type;
 	@Override public TsScopeType getType() {return type;}
@@ -57,11 +57,11 @@ public class JeeTsScope implements JeeslTsScope<JeeLang,JeeDescription,JeeTsCate
 	public Map<String, JeeDescription> getDescription() {return description;}
 	public void setDescription(Map<String, JeeDescription> description) {this.description = description;}
 	
-	private List<JeeTsInterval> intervals;
-	public List<JeeTsInterval> getIntervals() {if(intervals==null){intervals = new ArrayList<JeeTsInterval>();}return intervals;}
-	public void setIntervals(List<JeeTsInterval> intervals) {this.intervals = intervals;}
+	private List<TsInterval> intervals;
+	public List<TsInterval> getIntervals() {if(intervals==null){intervals = new ArrayList<TsInterval>();}return intervals;}
+	public void setIntervals(List<TsInterval> intervals) {this.intervals = intervals;}
 	
-	private List<JeeTsEntityClass> classes;
-	public List<JeeTsEntityClass> getClasses() {if(classes==null){classes = new ArrayList<JeeTsEntityClass>();}return classes;}
-	public void setClasses(List<JeeTsEntityClass> classes) {this.classes = classes;}
+	private List<TsEntityClass> classes;
+	public List<TsEntityClass> getClasses() {if(classes==null){classes = new ArrayList<TsEntityClass>();}return classes;}
+	public void setClasses(List<TsEntityClass> classes) {this.classes = classes;}
 }

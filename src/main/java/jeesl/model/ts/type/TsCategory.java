@@ -10,9 +10,9 @@ import jeesl.model.locales.JeeStatus;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.status.UtilsStatus;
 
-public class JeeTsCategory extends JeeStatus
+public class TsCategory extends JeeStatus
 								implements Serializable,EjbPersistable,EjbWithCode,
-											UtilsStatus<JeeTsCategory,JeeLang,JeeDescription>
+											UtilsStatus<TsCategory,JeeLang,JeeDescription>
 {
 	public static final long serialVersionUID=1;
 }

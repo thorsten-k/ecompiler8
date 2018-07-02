@@ -10,9 +10,11 @@ import jeesl.model.locales.JeeStatus;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.status.UtilsStatus;
 
-public class JeeTsInterval extends JeeStatus
+public class TsDataSource extends JeeStatus
 								implements Serializable,EjbPersistable,EjbWithCode,
-											UtilsStatus<JeeTsInterval,JeeLang,JeeDescription>
+											UtilsStatus<TsDataSource,JeeLang,JeeDescription>
 {
 	public static final long serialVersionUID=1;
+	
+	public enum Code{inventory}
 }
