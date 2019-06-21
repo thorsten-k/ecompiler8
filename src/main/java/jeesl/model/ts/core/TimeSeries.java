@@ -2,7 +2,7 @@ package jeesl.model.ts.core;
 
 import java.io.Serializable;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTimeSeries;
+import org.jeesl.interfaces.model.module.ts.core.JeeslTimeSeries;
 
 import jeesl.model.ts.type.TsInterval;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;

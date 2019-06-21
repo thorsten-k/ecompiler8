@@ -1,16 +1,8 @@
 package jeesl.model.ts.core;
 
-import java.io.Serializable;
+import org.jeesl.interfaces.model.module.ts.data.JeeslTsBridge;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsBridge;
-
-import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
-import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
-import net.sf.ahtutils.interfaces.model.with.parent.EjbWithParentAttributeResolver;
-
-public class TsBridge implements Serializable,EjbRemoveable,EjbPersistable,
-							EjbWithParentAttributeResolver,
-							JeeslTsBridge<TsEntityClass>
+public class TsBridge implements JeeslTsBridge<TsEntityClass>
 {
 	public static final long serialVersionUID=1;
 	public enum Attributes {entityClass}

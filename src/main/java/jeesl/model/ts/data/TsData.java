@@ -2,7 +2,7 @@ package jeesl.model.ts.data;
 
 import java.util.Date;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsData;
+import org.jeesl.interfaces.model.module.ts.data.JeeslTsData;
 
 import jeesl.model.ts.core.TimeSeries;
 import jeesl.model.ts.type.TsWorkspace;

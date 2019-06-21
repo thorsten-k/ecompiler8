@@ -1,8 +1,10 @@
 package jeesl.model.ts.data;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsDataPoint;
+import org.jeesl.interfaces.model.module.ts.data.JeeslTsDataPoint;
 
-public class TsDataPoint implements JeeslTsDataPoint<TsData>
+import jeesl.model.ts.core.TsMultiPoint;
+
+public class TsDataPoint implements JeeslTsDataPoint<TsData,TsMultiPoint>
 {
 	public static final long serialVersionUID=1;
 	
@@ -17,4 +19,8 @@ public class TsDataPoint implements JeeslTsDataPoint<TsData>
 	private Double value;
 	@Override public Double getValue() {return value;}
 	@Override public void setValue(Double value) {this.value = value;}
+	
+	private TsMultiPoint multiPoint;
+	@Override public TsMultiPoint getMultiPoint() {return multiPoint;}
+	@Override public void setMultiPoint(TsMultiPoint multiPoint) {this.multiPoint = multiPoint;}
 }

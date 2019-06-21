@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsScope;
+import org.jeesl.interfaces.model.module.ts.core.JeeslTsScope;
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
 import jeesl.model.ts.type.TsCategory;
 import jeesl.model.ts.type.TsInterval;
-import jeesl.model.ts.type.TsUnit;
 import jeesl.model.ts.type.TsScopeType;
+import jeesl.model.ts.type.TsUnit;
 
 public class TsScope implements JeeslTsScope<JeeLang,JeeDescription,TsCategory,TsScopeType,TsUnit,TsEntityClass,TsInterval>
 {

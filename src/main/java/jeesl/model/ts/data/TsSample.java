@@ -3,7 +3,7 @@ package jeesl.model.ts.data;
 import java.io.Serializable;
 import java.util.Date;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsSample;
+import org.jeesl.interfaces.model.module.ts.data.JeeslTsSample;
 
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;

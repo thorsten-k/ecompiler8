@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsTransaction;
+import org.jeesl.interfaces.model.module.ts.data.JeeslTsTransaction;
 
+import jeesl.model.system.io.fr.IoFileContainer;
 import jeesl.model.ts.type.TsDataSource;
 import jeesl.model.user.JeeUser;
 
-public class TsTransaction implements JeeslTsTransaction<TsDataSource,TsData,JeeUser>
+public class TsTransaction implements JeeslTsTransaction<TsDataSource,TsData,JeeUser,IoFileContainer>
 {
 	public static final long serialVersionUID=1;
 	
@@ -40,4 +41,8 @@ public class TsTransaction implements JeeslTsTransaction<TsDataSource,TsData,Jee
 	private String reference;
 	@Override public String getReference() {return reference;}
 	@Override public void setReference(String reference) {this.reference = reference;}
+	
+	private IoFileContainer frContainer;
+	@Override public IoFileContainer getFrContainer() {return frContainer;}
+	@Override public void setFrContainer(IoFileContainer frContainer) {this.frContainer = frContainer;}
 }

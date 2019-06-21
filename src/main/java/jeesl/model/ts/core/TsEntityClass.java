@@ -1,17 +1,14 @@
 package jeesl.model.ts.core;
 
-import java.io.Serializable;
 import java.util.Map;
 
-import org.jeesl.interfaces.model.module.ts.JeeslTsEntityClass;
+import org.jeesl.interfaces.model.module.ts.core.JeeslTsEntityClass;
 
 import jeesl.model.locales.JeeDescription;
 import jeesl.model.locales.JeeLang;
 import jeesl.model.ts.type.TsCategory;
-import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 
-public class TsEntityClass implements Serializable,EjbPersistable,
-								JeeslTsEntityClass<JeeLang,JeeDescription,TsCategory>
+public class TsEntityClass implements JeeslTsEntityClass<JeeLang,JeeDescription,TsCategory>
 {
 	public static final long serialVersionUID=1;
 	
@@ -41,6 +38,14 @@ public class TsEntityClass implements Serializable,EjbPersistable,
 	@Override public String getXpath() {return xpath;}
 	@Override public void setXpath(String xpath) {this.xpath = xpath;}
 	
+	private String xpathParent;
+	@Override public String getXpathParent() {return xpathParent;}
+	@Override public void setXpathParent(String xpathParent) {this.xpathParent = xpathParent;}
+	
+	private String xpathName;
+	@Override public String getXpathName() {return xpathName;}
+	@Override public void setXpathName(String xpathName) {this.xpathName = xpathName;}
+
 	private String attribute;
 	@Override public String getAttribute() {return attribute;}
 	@Override public void setAttribute(String attribute) {this.attribute = attribute;}
@@ -52,4 +57,5 @@ public class TsEntityClass implements Serializable,EjbPersistable,
 	private Map<String, JeeDescription> description;
 	@Override public Map<String, JeeDescription> getDescription() {return description;}
 	@Override public void setDescription(Map<String, JeeDescription> description) {this.description = description;}
+	
 }

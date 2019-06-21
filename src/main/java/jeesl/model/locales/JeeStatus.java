@@ -73,7 +73,6 @@ public class JeeStatus implements Serializable,EjbPersistable,EjbRemoveable,EjbS
 	public String getSymbol(){return symbol;}
 	public void setSymbol(String symbol){this.symbol = symbol;}
 	
-
 	private JeeGraphic graphic;
 	public JeeGraphic getGraphic() {return graphic;}
 	public void setGraphic(JeeGraphic graphic) {this.graphic = graphic;}
