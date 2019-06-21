@@ -8,14 +8,14 @@ import java.util.Map;
 import org.jeesl.interfaces.model.system.security.framework.JeeslSecurityRole;
 import org.jeesl.interfaces.model.system.with.code.EjbWithCode;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 import jeesl.model.user.JeeUser;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityRole implements EjbWithCode,Serializable,EjbRemoveable,EjbPersistable,
-	JeeslSecurityRole<JeeLang,JeeDescription,SecurityCategory,SecurityView,SecurityUsecase,SecurityAction,JeeUser>
+	JeeslSecurityRole<IoLang,IoDescription,SecurityCategory,SecurityView,SecurityUsecase,SecurityAction,JeeUser>
 {
 	public static enum Code {systemAht}
 	
@@ -47,13 +47,13 @@ public class SecurityRole implements EjbWithCode,Serializable,EjbRemoveable,EjbP
 	@Override public int getPosition() {return position;}
 	@Override public void setPosition(int position) {this.position = position;}
 	
-	private Map<String,JeeLang> name;
-	@Override public Map<String,JeeLang> getName() {return name;}
-	@Override public void setName(Map<String,JeeLang> name) {this.name = name;}
+	private Map<String,IoLang> name;
+	@Override public Map<String,IoLang> getName() {return name;}
+	@Override public void setName(Map<String,IoLang> name) {this.name = name;}
 	
-	private Map<String,JeeDescription> description;
-	@Override public Map<String,JeeDescription> getDescription() {return description;}
-	@Override public void setDescription(Map<String,JeeDescription> description) {this.description = description;}
+	private Map<String,IoDescription> description;
+	@Override public Map<String,IoDescription> getDescription() {return description;}
+	@Override public void setDescription(Map<String,IoDescription> description) {this.description = description;}
 	
 	private List<SecurityView> views;
 	@Override public List<SecurityView> getViews() {if(views==null){views = new ArrayList<SecurityView>();}return views;}

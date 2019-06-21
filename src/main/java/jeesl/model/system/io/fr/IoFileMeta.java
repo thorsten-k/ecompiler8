@@ -6,9 +6,9 @@ import java.util.Map;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.jeesl.interfaces.model.system.io.fr.JeeslFileMeta;
 
-import jeesl.model.locales.JeeDescription;
+import jeesl.model.locales.IoDescription;
 
-public class IoFileMeta implements JeeslFileMeta<JeeDescription,IoFileContainer,IoFileType>
+public class IoFileMeta implements JeeslFileMeta<IoDescription,IoFileContainer,IoFileType>
 {
 	public static final long serialVersionUID=1;
 	
@@ -33,9 +33,9 @@ public class IoFileMeta implements JeeslFileMeta<JeeDescription,IoFileContainer,
 	@Override public String getFileName() {return fileName;}
 	@Override public void setFileName(String fileName) {this.fileName = fileName;}
 	
-	private Map<String,JeeDescription> description;
-	@Override public Map<String,JeeDescription> getDescription() {return description;}
-	@Override public void setDescription(Map<String,JeeDescription> description) {this.description = description;}
+	private Map<String,IoDescription> description;
+	@Override public Map<String,IoDescription> getDescription() {return description;}
+	@Override public void setDescription(Map<String,IoDescription> description) {this.description = description;}
 	
 	private Date record;
 	@Override public Date getRecord() {return record;}

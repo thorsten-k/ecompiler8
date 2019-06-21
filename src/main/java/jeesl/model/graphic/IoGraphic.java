@@ -1,17 +1,16 @@
 package jeesl.model.graphic;
 
-import java.io.Serializable;
 import java.util.List;
 
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.jeesl.interfaces.model.system.graphic.core.JeeslGraphic;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 import net.sf.ahtutils.model.qualifier.EjbErNode;
 
 @EjbErNode(name="Graphic",category="symbol",subset="sld",level=3)
-public class JeeGraphic implements JeeslGraphic<JeeLang,JeeDescription,JeeGraphic,JeeGraphicType,JeeGraphicFigure,JeeGraphicStyle>
+public class IoGraphic implements JeeslGraphic<IoLang,IoDescription,IoGraphic,IoGraphicType,IoGraphicFigure,IoGraphicStyle>
 {
 	public static final long serialVersionUID=1;
 	
@@ -25,14 +24,14 @@ public class JeeGraphic implements JeeslGraphic<JeeLang,JeeDescription,JeeGraphi
 	@Override public Long getVersionLock() {return versionLock;}
 
 
-	private JeeGraphicType type;
-	public JeeGraphicType getType(){return type;}
-	public void setType(JeeGraphicType type){this.type = type;}
+	private IoGraphicType type;
+	public IoGraphicType getType(){return type;}
+	public void setType(IoGraphicType type){this.type = type;}
 	
 
-	private JeeGraphicStyle style;
-	public JeeGraphicStyle getStyle() {return style;}
-	public void setStyle(JeeGraphicStyle style) {this.style = style;}
+	private IoGraphicStyle style;
+	public IoGraphicStyle getStyle() {return style;}
+	public void setStyle(IoGraphicStyle style) {this.style = style;}
 	
 //	@Lob
 	private byte[] data;
@@ -56,9 +55,9 @@ public class JeeGraphic implements JeeslGraphic<JeeLang,JeeDescription,JeeGraphi
 	public void setColorBorder(String colorBorder) {this.colorBorder = colorBorder;}
     
 
-	private List<JeeGraphicFigure> figures;
-	@Override public List<JeeGraphicFigure> getFigures() {return figures;}
-	@Override public void setFigures(List<JeeGraphicFigure> figures) {this.figures = figures;}
+	private List<IoGraphicFigure> figures;
+	@Override public List<IoGraphicFigure> getFigures() {return figures;}
+	@Override public void setFigures(List<IoGraphicFigure> figures) {this.figures = figures;}
 	
 	@Override public String toString()
 	{
@@ -71,6 +70,6 @@ public class JeeGraphic implements JeeslGraphic<JeeLang,JeeDescription,JeeGraphi
 		return sb.toString();
 	}
 	
-	@Override public boolean equals(Object object) {return (object instanceof JeeGraphic) ? id == ((JeeGraphic) object).getId() : (object == this);}
+	@Override public boolean equals(Object object) {return (object instanceof IoGraphic) ? id == ((IoGraphic) object).getId() : (object == this);}
 	@Override public int hashCode() {return new HashCodeBuilder(13,37).append(id).toHashCode();}
 }

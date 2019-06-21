@@ -8,7 +8,7 @@ import jeesl.model.ts.type.TsInterval;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
-public class TimeSeries implements Serializable,EjbRemoveable,EjbPersistable,
+public class TsSeries implements Serializable,EjbRemoveable,EjbPersistable,
 								JeeslTimeSeries<TsScope,TsBridge,TsInterval>
 {
 	public static final long serialVersionUID=1;

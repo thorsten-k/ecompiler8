@@ -4,10 +4,10 @@ import java.util.Date;
 
 import org.jeesl.interfaces.model.module.ts.data.JeeslTsData;
 
-import jeesl.model.ts.core.TimeSeries;
+import jeesl.model.ts.core.TsSeries;
 import jeesl.model.ts.type.TsWorkspace;
 
-public class TsData implements JeeslTsData<TimeSeries,TsTransaction,TsSample,TsWorkspace>
+public class TsData implements JeeslTsData<TsSeries,TsTransaction,TsSample,TsWorkspace>
 {
 	public static final long serialVersionUID=1;
 	
@@ -15,9 +15,9 @@ public class TsData implements JeeslTsData<TimeSeries,TsTransaction,TsSample,TsW
 	@Override public long getId() {return id;}
 	@Override public void setId(long id) {this.id = id;}
 	
-	private TimeSeries timeSeries;
-	@Override public TimeSeries getTimeSeries() {return timeSeries;}
-	@Override public void setTimeSeries(TimeSeries timeSeries) {this.timeSeries = timeSeries;}
+	private TsSeries timeSeries;
+	@Override public TsSeries getTimeSeries() {return timeSeries;}
+	@Override public void setTimeSeries(TsSeries timeSeries) {this.timeSeries = timeSeries;}
 
 	private TsWorkspace workspace;
 	@Override public TsWorkspace getWorkspace() {return workspace;}

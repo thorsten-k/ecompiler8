@@ -5,10 +5,10 @@ import java.util.Map;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.jeesl.interfaces.model.system.io.fr.JeeslFileStorage;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 
-public class IoFileStorage implements JeeslFileStorage<JeeLang,JeeDescription,IoFileStorageEngine>
+public class IoFileStorage implements JeeslFileStorage<IoLang,IoDescription,IoFileStorageEngine>
 {
 	public static final long serialVersionUID=1;
 	
@@ -30,13 +30,13 @@ public class IoFileStorage implements JeeslFileStorage<JeeLang,JeeDescription,Io
 	@Override public IoFileStorageEngine getEngine() {return engine;}
 	@Override public void setEngine(IoFileStorageEngine engine) {this.engine = engine;}
 
-	private Map<String,JeeLang> name;
-	@Override public Map<String,JeeLang> getName() {return name;}
-	@Override public void setName(Map<String,JeeLang> name) {this.name = name;}
+	private Map<String,IoLang> name;
+	@Override public Map<String,IoLang> getName() {return name;}
+	@Override public void setName(Map<String,IoLang> name) {this.name = name;}
 	
-	private Map<String,JeeDescription> description;
-	@Override public Map<String,JeeDescription> getDescription() {return description;}
-	@Override public void setDescription(Map<String,JeeDescription> description) {this.description = description;}
+	private Map<String,IoDescription> description;
+	@Override public Map<String,IoDescription> getDescription() {return description;}
+	@Override public void setDescription(Map<String,IoDescription> description) {this.description = description;}
 	
 	private String json;
 	@Override public String getJson() {return json;}

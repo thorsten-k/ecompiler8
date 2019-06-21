@@ -5,11 +5,11 @@ import java.util.Map;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.jeesl.interfaces.model.module.ts.core.JeeslTsMultiPoint;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 import jeesl.model.ts.type.TsUnit;
 
-public class TsMultiPoint implements JeeslTsMultiPoint<JeeLang,JeeDescription,TsScope,TsUnit>
+public class TsMultiPoint implements JeeslTsMultiPoint<IoLang,IoDescription,TsScope,TsUnit>
 {
 	public static final long serialVersionUID=1;
 	public static enum Code{pageImpressions}
@@ -36,13 +36,13 @@ public class TsMultiPoint implements JeeslTsMultiPoint<JeeLang,JeeDescription,Ts
 	@Override public Boolean getVisible() {return visible;}
 	@Override public void setVisible(Boolean visible) {this.visible = visible;}
 	
-	private Map<String, JeeLang> name;
-	@Override public Map<String, JeeLang> getName() {return name;}
-	@Override public void setName(Map<String,JeeLang> name) {this.name = name;}
+	private Map<String, IoLang> name;
+	@Override public Map<String, IoLang> getName() {return name;}
+	@Override public void setName(Map<String,IoLang> name) {this.name = name;}
 	
-	private Map<String,JeeDescription> description;
-	@Override public Map<String,JeeDescription> getDescription() {return description;}
-	@Override public void setDescription(Map<String,JeeDescription> description) {this.description = description;}
+	private Map<String,IoDescription> description;
+	@Override public Map<String,IoDescription> getDescription() {return description;}
+	@Override public void setDescription(Map<String,IoDescription> description) {this.description = description;}
 	
 	private TsUnit unit;
 	@Override public TsUnit getUnit() {return unit;}

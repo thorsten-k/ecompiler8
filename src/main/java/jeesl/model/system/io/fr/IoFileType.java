@@ -6,12 +6,12 @@ import java.util.List;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.jeesl.interfaces.model.system.io.fr.JeeslFileType;
 
-import jeesl.model.graphic.JeeGraphic;
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
-import jeesl.model.locales.JeeStatus;
+import jeesl.model.graphic.IoGraphic;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
+import jeesl.model.locales.IoStatus;
 
-public class IoFileType extends JeeStatus implements JeeslFileType<IoFileType,JeeLang,JeeDescription,JeeGraphic>
+public class IoFileType extends IoStatus implements JeeslFileType<IoFileType,IoLang,IoDescription,IoGraphic>
 {
 	public static final long serialVersionUID=1;
 	public static enum Code{lcf};

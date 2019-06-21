@@ -7,7 +7,7 @@ import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 import net.sf.ahtutils.interfaces.model.status.UtilsLang;
 
 
-public class JeeLang implements UtilsLang,EjbRemoveable,Serializable,EjbPersistable
+public class IoLang implements UtilsLang,EjbRemoveable,Serializable,EjbPersistable
 {
 	public static final long serialVersionUID=1;
 	

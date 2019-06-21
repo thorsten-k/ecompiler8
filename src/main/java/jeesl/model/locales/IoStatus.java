@@ -6,7 +6,7 @@ import java.util.Map;
 
 import org.jeesl.interfaces.model.system.with.code.EjbWithCode;
 
-import jeesl.model.graphic.JeeGraphic;
+import jeesl.model.graphic.IoGraphic;
 import net.sf.ahtutils.interfaces.model.behaviour.EjbSaveable;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
@@ -16,9 +16,9 @@ import net.sf.ahtutils.interfaces.model.with.image.EjbWithImageAlt;
 import net.sf.ahtutils.interfaces.model.with.parent.EjbWithParent;
 import net.sf.ahtutils.interfaces.model.with.position.EjbWithPositionVisible;
 
-public class JeeStatus implements Serializable,EjbPersistable,EjbRemoveable,EjbSaveable,
+public class IoStatus implements Serializable,EjbPersistable,EjbRemoveable,EjbSaveable,
 									EjbWithParent,EjbWithCode,EjbWithImage,EjbWithImageAlt,EjbWithPositionVisible,
-									EjbWithLangDescription<JeeLang,JeeDescription>
+									EjbWithLangDescription<IoLang,IoDescription>
 {
 	private static final long serialVersionUID = 1;
 	
@@ -30,14 +30,14 @@ public class JeeStatus implements Serializable,EjbPersistable,EjbRemoveable,EjbS
 	public long getId() {return id;}
 		
 
-	protected Map<String, JeeLang> name;
-	public Map<String, JeeLang> getName() {if(name==null){name=new Hashtable<String,JeeLang>();}return name;}
-	public void setName(Map<String, JeeLang> name) {this.name = name;}
+	protected Map<String, IoLang> name;
+	public Map<String, IoLang> getName() {if(name==null){name=new Hashtable<String,IoLang>();}return name;}
+	public void setName(Map<String, IoLang> name) {this.name = name;}
 	
 
-	protected Map<String, JeeDescription> description;
-	public Map<String, JeeDescription> getDescription() {return description;}
-	public void setDescription(Map<String, JeeDescription> description) {this.description = description;}
+	protected Map<String, IoDescription> description;
+	public Map<String, IoDescription> getDescription() {return description;}
+	public void setDescription(Map<String, IoDescription> description) {this.description = description;}
 		
 	protected String code;
 	public String getCode() {return code;}
@@ -64,18 +64,18 @@ public class JeeStatus implements Serializable,EjbPersistable,EjbRemoveable,EjbS
 	public void setPosition(int position) {this.position = position;}
 	
 
-	protected JeeStatus parent;
+	protected IoStatus parent;
 	@SuppressWarnings("unchecked")
 	public <P extends EjbWithCode> P getParent() {return (P)parent;}
-	public <P extends EjbWithCode> void setParent(P parent) {this.parent=(JeeStatus)parent;}
+	public <P extends EjbWithCode> void setParent(P parent) {this.parent=(IoStatus)parent;}
 
 	protected String symbol;
 	public String getSymbol(){return symbol;}
 	public void setSymbol(String symbol){this.symbol = symbol;}
 	
-	private JeeGraphic graphic;
-	public JeeGraphic getGraphic() {return graphic;}
-	public void setGraphic(JeeGraphic graphic) {this.graphic = graphic;}
+	private IoGraphic graphic;
+	public IoGraphic getGraphic() {return graphic;}
+	public void setGraphic(IoGraphic graphic) {this.graphic = graphic;}
 	
 	public String toString()
 	{

@@ -6,13 +6,12 @@ import java.util.List;
 import org.apache.commons.lang.builder.HashCodeBuilder;
 import org.jeesl.interfaces.model.module.ts.core.JeeslTsScopeType;
 
-import jeesl.model.graphic.JeeGraphic;
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
-import jeesl.model.locales.JeeStatus;
-import net.sf.ahtutils.interfaces.model.status.UtilsStatus;
+import jeesl.model.graphic.IoGraphic;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
+import jeesl.model.locales.IoStatus;
 
-public class TsScopeType extends JeeStatus implements JeeslTsScopeType<TsScopeType,JeeLang,JeeDescription,JeeGraphic>
+public class TsScopeType extends IoStatus implements JeeslTsScopeType<TsScopeType,IoLang,IoDescription,IoGraphic>
 {
 	public static final long serialVersionUID=1;
 

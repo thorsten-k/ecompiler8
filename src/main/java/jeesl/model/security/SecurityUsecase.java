@@ -7,14 +7,14 @@ import java.util.Map;
 
 import org.jeesl.interfaces.model.system.security.framework.JeeslSecurityUsecase;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 import jeesl.model.user.JeeUser;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityUsecase implements Serializable,EjbRemoveable,EjbPersistable,
-			JeeslSecurityUsecase<JeeLang,JeeDescription,SecurityCategory,SecurityRole,SecurityView,SecurityAction>
+			JeeslSecurityUsecase<IoLang,IoDescription,SecurityCategory,SecurityRole,SecurityView,SecurityAction>
 {
 	public static final long serialVersionUID=1;
 	
@@ -45,13 +45,13 @@ public class SecurityUsecase implements Serializable,EjbRemoveable,EjbPersistabl
 	@Override public int getPosition() {return position;}
 	@Override public void setPosition(int position) {this.position = position;}
 	
-	private Map<String,JeeLang> name;
-	public Map<String,JeeLang> getName() {return name;}
-	public void setName(Map<String, JeeLang> name) {this.name = name;}
+	private Map<String,IoLang> name;
+	public Map<String,IoLang> getName() {return name;}
+	public void setName(Map<String, IoLang> name) {this.name = name;}
 	
-	private Map<String,JeeDescription> description;
-	public Map<String,JeeDescription> getDescription() {return description;}
-	public void setDescription(Map<String,JeeDescription> description) {this.description = description;}
+	private Map<String,IoDescription> description;
+	public Map<String,IoDescription> getDescription() {return description;}
+	public void setDescription(Map<String,IoDescription> description) {this.description = description;}
 	
 	private List<SecurityAction> actions;
 	public List<SecurityAction> getActions() {if(actions==null){actions = new ArrayList<SecurityAction>();}return actions;}

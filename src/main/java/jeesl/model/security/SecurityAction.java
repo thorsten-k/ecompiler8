@@ -7,14 +7,14 @@ import java.util.Map;
 
 import org.jeesl.interfaces.model.system.security.framework.JeeslSecurityAction;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 import jeesl.model.user.JeeUser;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.crud.EjbRemoveable;
 
 public class SecurityAction implements Serializable,EjbRemoveable,EjbPersistable,
-	JeeslSecurityAction<JeeLang,JeeDescription,SecurityRole,SecurityView,SecurityUsecase,SecurityActionTemplate>
+	JeeslSecurityAction<IoLang,IoDescription,SecurityRole,SecurityView,SecurityUsecase,SecurityActionTemplate>
 {
 	public static final long serialVersionUID=1;
 
@@ -50,13 +50,13 @@ public class SecurityAction implements Serializable,EjbRemoveable,EjbPersistable
 	@Override public int getPosition() {return position;}
 	@Override public void setPosition(int position) {this.position = position;}
 	
-	private Map<String,JeeLang> name;
-	@Override public Map<String,JeeLang> getName() {return name;}
-	@Override public void setName(Map<String,JeeLang> name) {this.name = name;}
+	private Map<String,IoLang> name;
+	@Override public Map<String,IoLang> getName() {return name;}
+	@Override public void setName(Map<String,IoLang> name) {this.name = name;}
 	
-	private Map<String,JeeDescription> description;
-	@Override public Map<String,JeeDescription> getDescription() {return description;}
-	@Override public void setDescription(Map<String,JeeDescription> description) {this.description = description;}
+	private Map<String,IoDescription> description;
+	@Override public Map<String,IoDescription> getDescription() {return description;}
+	@Override public void setDescription(Map<String,IoDescription> description) {this.description = description;}
 	
 	private List<SecurityRole> roles;
 	@Override public List<SecurityRole> getRoles() {if(roles==null){roles = new ArrayList<SecurityRole>();}return roles;}
@@ -71,7 +71,7 @@ public class SecurityAction implements Serializable,EjbRemoveable,EjbPersistable
 		return null;
 	}
 	@Override
-	public Map<String, JeeLang> toName() {
+	public Map<String, IoLang> toName() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -4,16 +4,16 @@ import java.io.Serializable;
 
 import org.jeesl.interfaces.model.system.with.code.EjbWithCode;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
-import jeesl.model.locales.JeeStatus;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
+import jeesl.model.locales.IoStatus;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.status.UtilsStatus;
 import net.sf.ahtutils.interfaces.model.status.UtilsWithSymbol;
 
-public class TsUnit extends JeeStatus
+public class TsUnit extends IoStatus
 								implements Serializable,EjbPersistable,EjbWithCode,UtilsWithSymbol,
-											UtilsStatus<TsUnit,JeeLang,JeeDescription>
+											UtilsStatus<TsUnit,IoLang,IoDescription>
 {
 	public static final long serialVersionUID=1;
 }

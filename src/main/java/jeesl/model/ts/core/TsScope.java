@@ -6,14 +6,14 @@ import java.util.Map;
 
 import org.jeesl.interfaces.model.module.ts.core.JeeslTsScope;
 
-import jeesl.model.locales.JeeDescription;
-import jeesl.model.locales.JeeLang;
+import jeesl.model.locales.IoDescription;
+import jeesl.model.locales.IoLang;
 import jeesl.model.ts.type.TsCategory;
 import jeesl.model.ts.type.TsInterval;
 import jeesl.model.ts.type.TsScopeType;
 import jeesl.model.ts.type.TsUnit;
 
-public class TsScope implements JeeslTsScope<JeeLang,JeeDescription,TsCategory,TsScopeType,TsUnit,TsEntityClass,TsInterval>
+public class TsScope implements JeeslTsScope<IoLang,IoDescription,TsCategory,TsScopeType,TsUnit,TsEntityClass,TsInterval>
 {
 	public static final long serialVersionUID=1;
 	public static enum Code{rf,airTemp,
@@ -49,13 +49,13 @@ public class TsScope implements JeeslTsScope<JeeLang,JeeDescription,TsCategory,T
 	@Override public boolean isVisible() {return visible;}
 	@Override public void setVisible(boolean visible) {this.visible = visible;}
 	
-	private Map<String, JeeLang> name;
-	public Map<String, JeeLang> getName() {return name;}
-	public void setName(Map<String, JeeLang> name) {this.name = name;}
+	private Map<String, IoLang> name;
+	public Map<String, IoLang> getName() {return name;}
+	public void setName(Map<String, IoLang> name) {this.name = name;}
 	
-	private Map<String, JeeDescription> description;
-	public Map<String, JeeDescription> getDescription() {return description;}
-	public void setDescription(Map<String, JeeDescription> description) {this.description = description;}
+	private Map<String, IoDescription> description;
+	public Map<String, IoDescription> getDescription() {return description;}
+	public void setDescription(Map<String, IoDescription> description) {this.description = description;}
 	
 	private List<TsInterval> intervals;
 	public List<TsInterval> getIntervals() {if(intervals==null){intervals = new ArrayList<TsInterval>();}return intervals;}

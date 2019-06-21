@@ -5,7 +5,7 @@ import java.io.Serializable;
 import net.sf.ahtutils.interfaces.model.crud.EjbPersistable;
 import net.sf.ahtutils.interfaces.model.status.UtilsDescription;
 
-public class JeeDescription implements UtilsDescription,Serializable,EjbPersistable
+public class IoDescription implements UtilsDescription,Serializable,EjbPersistable
 {
 	public static final long serialVersionUID=1;
 	
