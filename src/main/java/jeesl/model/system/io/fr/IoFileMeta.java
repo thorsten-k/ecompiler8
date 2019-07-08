@@ -8,7 +8,7 @@ import org.jeesl.interfaces.model.system.io.fr.JeeslFileMeta;
 
 import jeesl.model.locales.IoDescription;
 
-public class IoFileMeta implements JeeslFileMeta<IoDescription,IoFileContainer,IoFileType>
+public class IoFileMeta implements JeeslFileMeta<IoDescription,IoFileContainer,IoFileType,IoFileStatus>
 {
 	public static final long serialVersionUID=1;
 	
@@ -53,6 +53,10 @@ public class IoFileMeta implements JeeslFileMeta<IoDescription,IoFileContainer,I
 	@Override public IoFileType getType() {return type;}
 	@Override public void setType(IoFileType type) {this.type = type;}
 
+	private IoFileStatus status;
+	@Override public IoFileStatus getStatus() {return status;}
+	@Override public void setStatus(IoFileStatus status) {this.status = status;}
+	
 	private String category;
 	@Override public String getCategory() {return category;}
 	@Override public void setCategory(String category) {this.category = category;}
