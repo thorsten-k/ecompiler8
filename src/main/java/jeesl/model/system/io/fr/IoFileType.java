@@ -11,7 +11,7 @@ import jeesl.model.locales.IoDescription;
 import jeesl.model.locales.IoLang;
 import jeesl.model.locales.IoStatus;
 
-public class IoFileType extends IoStatus implements JeeslFileType<IoFileType,IoLang,IoDescription,IoGraphic>
+public class IoFileType extends IoStatus implements JeeslFileType<IoLang,IoDescription,IoFileType,IoGraphic>
 {
 	public static final long serialVersionUID=1;
 	public static enum Code{lcf};
