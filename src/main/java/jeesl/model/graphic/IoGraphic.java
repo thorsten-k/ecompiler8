@@ -10,7 +10,7 @@ import jeesl.model.locales.IoLang;
 import net.sf.ahtutils.model.qualifier.EjbErNode;
 
 @EjbErNode(name="Graphic",category="symbol",subset="sld",level=3)
-public class IoGraphic implements JeeslGraphic<IoLang,IoDescription,IoGraphic,IoGraphicType,IoGraphicFigure,IoGraphicStyle>
+public class IoGraphic implements JeeslGraphic<IoLang,IoDescription,IoGraphicType,IoGraphicFigure,IoGraphicStyle>
 {
 	public static final long serialVersionUID=1;
 	
