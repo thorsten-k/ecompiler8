@@ -53,13 +53,18 @@ public class IoFileMeta implements JeeslFileMeta<IoDescription,IoFileContainer,I
 	@Override public IoFileType getType() {return type;}
 	@Override public void setType(IoFileType type) {this.type = type;}
 
-	private IoFileStatus status;
-	@Override public IoFileStatus getStatus() {return status;}
-	@Override public void setStatus(IoFileStatus status) {this.status = status;}
-	
 	private String category;
 	@Override public String getCategory() {return category;}
 	@Override public void setCategory(String category) {this.category = category;}
+	
+	private IoFileStatus status;
+	@Override public IoFileStatus getStatus() {return status;}
+	@Override public void setStatus(IoFileStatus status) {this.status = status;}
+
+	private Date statusCheck;
+	@Override public Date getStatusCheck() {return statusCheck;}
+	@Override public void setStatusCheck(Date statusCheck) {this.statusCheck = statusCheck;}
+
 	
 
 	@Override public boolean equals(Object object){return (object instanceof IoFileMeta) ? id == ((IoFileMeta) object).getId() : (object == this);}
